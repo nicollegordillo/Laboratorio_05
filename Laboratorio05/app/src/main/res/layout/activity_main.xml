@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/fromCurrencyEditText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="From Currency (ej., EUR)"
+        android:inputType="text"
+        android:textAllCaps="true"
+        android:layout_marginBottom="8dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/toCurrencyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="To Currency (ej., USD)"
+        android:inputType="text"
+        android:textAllCaps="true"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/fetchLatestRatesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latest Rates"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/convertCurrencyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir Currency"/>
+
+    <TextView
+        android:id="@+id/conversionResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="18sp"/>
+
+</LinearLayout>
